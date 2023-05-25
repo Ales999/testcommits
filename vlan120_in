@@ -3,7 +3,7 @@ interface vlan120
 no ip access-list extended vlan120_in
 
 ip access-list extended vlan120_in
- permit ip any host 4.4.4.11
+ permit ip any host 4.4.4.12
  permit ip host 10.11.12.1 host 3.3.38.31
  permit ip host 10.11.12.1 host 3.3.3.25
  permit ip host 7.7.7.7 host 6.6.6.8
