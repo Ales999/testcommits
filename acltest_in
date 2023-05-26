@@ -1,0 +1,41 @@
+interface vlan111
+ no ip access-group lan111_in in
+no ip all
+
+ip access-list extended vlan111_in
+ permit ip host 1.1.1.1 host 2.2.2.2
+ permit ip host 1.1.1.1 host 2.2.2.1
+ permit ip host 10.11.12.1 host 3.3.3.25
+ remark # N2
+ permit ip any host 3.3.3.1
+ permit ip any host 3.3.3.7
+ permit ip any host 3.3.3.14
+ permit ip host 1.1.1.1 host 1.1.1.2
+ permit ip host 1.1.1.2 host 1.1.1.3
+ remark # New My Test
+ permit ip host 1.1.1.1 host 1.1.1.2
+ permit ip host 1.1.1.2 host 1.1.1.3
+ remark # Test back
+ permit ip host 7.7.7.7 host 6.6.6.10
+ permit ip host 7.7.7.7 host 6.6.6.8
+ remark # My Remark add
+ permit tcp host 42.42.42.1 host 43.43.43.1
+ remark # New My Test2
+ permit ip host 1.1.1.31 host 1.1.1.2
+ remark # My Test Local
+ permit ip host 44.44.44.1 host 33.33.33.2
+ remark New2 remark
+ permit ip 1.1.1.1 8.8.8.8
+ remark Test add
+ permit ip any host 8.77.66.55
+ remark req test1
+ permit ip host 7.7.7.7 any
+ permit ip any  host  8.8.1.1
+ remark # New permit
+ permit ip host 77.77.77.1 host 1.1.1.1
+ permit ip any host 4.4.2.5
+ deny   ip any object-group RFC1918
+ permit ip any any
+interface vlan111
+ ip access-group vlan2635_in in
+end
