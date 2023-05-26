@@ -11,7 +11,7 @@ ip access-list extended vlan111_in
  permit ip any host 3.3.3.7
  permit ip any host 3.3.3.14
  remark # My Remark add
- permit tcp host 42.42.42.1 43.43.43.1
+ permit tcp host 42.42.42.1 host 43.43.43.1
  permit ip host 1.1.1.1 host 1.1.1.2
  permit ip host 1.1.1.2 host 1.1.1.3
  remark # New My Test
