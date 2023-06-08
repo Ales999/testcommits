@@ -12,7 +12,7 @@ ip access-list extended vlan120_in
  permit ip host 1.1.1.2 host 1.1.2.1
  remark # Test 3
  permit ip any host 4.4.2.1
- permit ip any host 4.4.2.4
+ permit ip any host 4.4.2.5
  remark # Test with bads
  permit ip any host 4.4.2.2
  permit ip any host 4.4.2.2
